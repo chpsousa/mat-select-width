@@ -1,23 +1,35 @@
-<!-- <mat-list>
-  <h3 mat-subheader>Folders</h3>
-  <mat-list-item *ngFor="let folder of folders">
-    <h4 mat-line>{{folder.name}}</h4>
-    <p mat-line> {{folder.updated | date}} </p>
+<div class="page-header" fxLayout="row">
+	<div fxFlex="100" fxLayoutAlign="start center">
+		<div fxFlex="100">
+			<h2 class="page-title">
+				&nbsp;Empresas de tecnologia
+			</h2>
+		</div>
+	</div>
+</div>
+
+<mat-nav-list class="nav-list">
+	<mat-list-item *ngFor="let unit of units">
+
+		<ngx-avatar matListAvatar [name]="unit.name" [src]="unit.photoUrl" initialsSize="2" textSizeRatio="2" [size]="32"></ngx-avatar>
+
+		<h3 matLine>{{unit.name}}</h3>
+		<p matLine style="color: #999; font-weight: lighter;">
+			<span>{{unit.cityName}}</span>
+    </p>
+
+    <span fxFlex="120px" fxLayout="column" fxLayoutAlign="space-around center" fxHide.lt-sm>
+      <div>
+        <span *ngIf="unit.usersCount">{{unit.usersCount}}</span>
+      </div>
+      <small matLine>colaboradores</small>
+    </span>
+
+    <button mat-icon-button matTooltip="Opções">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+
   </mat-list-item>
-</mat-list> -->
-<mat-form-field>
-  <mat-select panelClass="happy" placeholder="Favorite food">
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<br>
-<br>
-<mat-form-field>
-  <mat-select panelClass="happy-other" placeholder="Favorite food 2">
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
+</mat-nav-list>

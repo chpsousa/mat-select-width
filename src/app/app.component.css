@@ -1,27 +1,16 @@
-p {
-  font-family: Lato;
-}
-.mat-list-item {
-  margin: 5px;
-  border-radius: 8px;
-}
-.mat-list-item:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-}
-.happy {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 480px !important;
+
+.nav-list {
+  padding-top: 0px !important;  
 }
 
-.happy-other {
-    background: cyan;
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-width: 100px !important;
+.small {
+    color: #999;
+  }
+
+.plan1 mat-icon {
+  color: #ccc;
+}
+
+.plan2 mat-icon {
+  color: #ccc;
 }
