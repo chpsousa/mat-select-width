@@ -8,6 +8,7 @@ export interface Unit {
   cityName: string;
   photoUrl: string;
   usersCount: string;
+  ceo?: string;
 }
 
 @Component({

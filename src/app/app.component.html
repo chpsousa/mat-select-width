@@ -17,6 +17,8 @@
 		<p matLine style="color: #999; font-weight: lighter;">
 			<span>{{unit.cityName}}</span>
     </p>
+    
+		<h3 matLine *ngIf="unit.ceo">{{unit.ceo}}</h3>
 
     <span fxFlex="120px" fxLayout="column" fxLayoutAlign="space-around center" fxHide.lt-sm>
       <div>
@@ -25,11 +27,17 @@
       <small matLine>colaboradores</small>
     </span>
 
-    <button mat-icon-button matTooltip="Opções">
+    <button mat-icon-button matTooltip="Opções" (click)="showMenu(unit)">
       <mat-icon>more_vert</mat-icon>
     </button>
 
     <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
 
   </mat-list-item>
+  
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item >Button 1</button>
+  </mat-menu>
+
 </mat-nav-list>
